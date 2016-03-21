@@ -29,7 +29,10 @@ class MarkdownTextarea(WidgetWithScript, forms.widgets.Textarea):
     @property
     def media(self):
         return forms.Media(
-            css = { 'all': ( 'wagtailmarkdown/css/simplemde.min.css', ) },
+            css = { 
+                'all': ( 'wagtailmarkdown/css/simplemde.min.css', ),
+                'all': ( 'wagtailmarkdown/css/font-awesome.min.css', ),
+            },
             js = (
                 'wagtailmarkdown/js/simplemde.min.js',
                 'wagtailmarkdown/js/simplemde.attach.js',
@@ -48,7 +51,10 @@ class MarkdownBlock(TextBlock):
     @property
     def media(self):
         return forms.Media(
-            css = { 'all': ( 'wagtailmarkdown/css/simplemde.min.css', ) },
+            css = { 
+                'all': ( 'wagtailmarkdown/css/simplemde.min.css', ),
+                'all': ( 'wagtailmarkdown/css/font-awesome.min.css', ),
+            },
             js = (
                 'wagtailmarkdown/js/simplemde.min.js',
                 'wagtailmarkdown/js/simplemde.attach.js',
